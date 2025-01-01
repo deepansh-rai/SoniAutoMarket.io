@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Company</title>
+    <!--main.css-->
+    <link rel="stylesheet" href="main.css">
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+    <!--font awesome--> 
+    <script src="all.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+              <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="content">
+              <div class="top-bar">
+                <div>📍 80 Manitoba St E, Moose Jaw, SK S6H 0A2, Canada</div>
+                <div style="margin-left: 20px; margin-right: 62px;">📞 905-874-9494</div>
+              </div>
+              <div class="main-nav">
+                <div class="menu">
+                  <a href="#">Home</a>
+                  <a href="#">Inventory</a>
+                  <a href="#">Financing</a>
+                  <a href="#">Service & Parts</a>
+                  <a href="#">Media</a>
+                  <a href="#">Dealership</a>
+                  <a href="#">Text Us Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    <div class="search-box">
+        <h1>WELCOME TO <span class="highlight">SONI AUTO MARKET</span></h1>
+        <input type="text" class="search-input" placeholder="Find Your Car (Year Make Model)">
+        <div class="search-filters">
+          <select>
+            <option>Make</option>
+          </select>
+          <select>
+            <option>Model</option>
+          </select>
+          <select>
+            <option>Min Year</option>
+          </select>
+          <select>
+            <option>Max Year</option>
+          </select>
+          <button class="search-button">SEARCH</button>
+        </div>
+    </div>
+    </header>
+
+<section class="services">
+ <div class="services-center">
+     <article class="service">
+         <div class="service-icon">
+             <i class="fas fa-wrench"></i>
+         </div>
+         <div class="service-text">
+             <h3>excellent repair</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur
+            adispiscing elit. Repellat, ad?</p>
+         </div>
+     </article>
+     <article class="service">
+        <div class="service-icon">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="service-text">
+            <h3>Newest cars</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur
+           adispiscing elit. Repellat, ad?</p>
+        </div>
+    </article>
+    <article class="service">
+        <div class="service-icon">
+            <i class="fas fa-space-shuttle"></i>
+        </div>
+        <div class="service-text">
+            <h3>Striving for more</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur
+           adispiscing elit. Repellat, ad?</p>
+        </div>
+    </article>
+ </div>
+
+</section>
+
+<div class="quick-search-box">
+    <h2>QUICK SEARCH BY <span class="highlight">MAKE</span></h2>
+    <div class="logo-slider">
+      <div class="slider-wrapper">
+        <img src="img/Aston-Martin.png" alt="BMW">
+        <img src="img/Audi.png" alt="Land Rover">
+        <img src="img/BMW.png" alt="Toyota">
+        <img src="img/Ferrari.png" alt="Dodge">
+        <img src="img/Mercedes-Benz.png" alt="Mercedes">
+        <img src="img/Porsche.png" alt="Hyundai">
+        <img src="img/Ford.png" alt="Ford">
+      </div>
+    </div>
+</div>
+
+<style>
+    .slider-container {
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .car-card {
+      min-width: 300px;
+      background-color: #1d1f27;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .car-details {
+      padding: 15px;
+    }
+
+    .car-details h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .car-details p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .button {
+      background-color: #ff0000;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .view-featured {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .view-featured button {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .view-featured button:hover {
+      background-color: #cc0000;
+    }
+  </style>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <!-- Car 1 -->
+      <div class="car-card">
+        <img src="img/ferrarif8.jpeg" alt="Car 1">
+        <div class="car-details">
+          <h3>2022 Ferrari F8</h3>
+          <div class="price">$690,000</div>
+          <p>2022 | 104 KM | Transmission</p>
+        </div>
+      </div>
+      <!-- Car 2 -->
+      <div class="car-card">
+        <img src="img/mercedesamg135.jpeg" alt="Car 2">
+        <div class="car-details">
+          <h3>2021 Mercedes-AMG</h3>
+          <div class="price">$549,999</div>
+          <p>2021 | 3,655 KM | Transmission</p>
+        </div>
+      </div>
+      <!-- Car 3 -->
+      <div class="car-card">
+        <img src="img/lamborghiniURUS.jpeg" alt="Car 3">
+        <div class="car-details">
+          <h3>2023 Lamborghini</h3>
+          <div class="price">$479,999</div>
+          <p>2023 | 4,431 KM | Transmission</p>
+        </div>
+      </div>
+      <!-- Car 4 -->
+      <div class="car-card">
+        <img src="img/rollsroyce.jpeg" alt="Car 4">
+        <div class="car-details">
+          <h3>2020 Rolls-Royce</h3>
+          <div class="price">$349,698</div>
+          <p>2020 | 16,850 KM | Transmission</p>
+        </div>
+      </div>
+          <!-- Car 5 -->
+      <div class="car-card">
+        <img src="img/ford-Mustang.jpeg" alt="Car 4">
+        <div class="car-details">
+          <h3>1969 Ford Mustang</h3>
+          <div class="price">$89,698</div>
+          <p>2020 | 16,850 KM | Transmission</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="view-featured">
+  <button>View All Featured Cars</button>
+</div>
+
+<script>
+  const slider = document.getElementById('slider');
+  const cardWidth = 320; // Including gap (min-width + gap)
+  let scrollPosition = 0;
+
+  // Function to move the slider automatically
+  function autoSlide() {
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    if (scrollPosition >= maxScroll) {
+      scrollPosition = 0; // Reset to start when reaching the end
+    } else {
+      scrollPosition += cardWidth;
+    }
+
+    slider.style.transform = `translateX(-${scrollPosition}px)`;
+  }
+
+  // Set an interval to slide every 3 seconds
+  const slideInterval = setInterval(autoSlide, 3000);
+</script>
+
+<div class="section-container">
+    <!-- Left Content -->
+    <div class="text-content">
+      <h2>Serving the SONI AUTO MARKET</h2>
+      <p>
+        Located at 22 Bramsteele Rd, Moosejaw, SK, L6W 1B3<br>
+        We have a strong and committed sales staff with many years of experience satisfying our customers’ needs.<br>
+        Feel free to browse our inventory online, request more information about vehicles, set up a test drive, or inquire about financing!
+      </p>
+    </div>
+  
+    <!-- Right Panel -->
+    <div class="info-panel">
+      <div class="info-item">
+        <i>🚗</i>
+        <div>
+          <h3>VIEW OUR INVENTORY</h3>
+          <p>Find Your Dream Car at a Competitive price</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i>💲</i>
+        <div>
+          <h3>APPLY FOR FINANCING</h3>
+          <p>Be prepared and shop with confidence.</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i>🔄</i>
+        <div>
+          <h3>TRADE-IN APPRAISAL</h3>
+          <p>Trade-In your vehicle for a new one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sheader">
+        <h1>SONI AUTO MARKET on <span style="color: red;">INSTAGRAM</span></h1>
+        <p>We are committed to making you a long-lasting customer and friend</p>
+    </div>
+
+    <div class="posts">
+        <div class="post-container" id="post-container">
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="sheader">
+                    <div style="display: flex; align-items: center;">
+                        <img src="img/logo.png" alt="Profile">
+                        <div class="info">
+                            <h3>SONIAUTOMARKET</h3>
+                            <p>Moosejaw, SK</p>
+                        </div>
+                    </div>
+                    <div class="menu">&#x22ee;</div>
+                </div>
+                <img src="img/insta1.jpg" alt="Car 1">
+                <div class="content">
+                    <div class="likes-count">2872 likes</div>
+                    <p>BOSS WHIP FOR WINTERS ⛄❄ #SONIAUTOMARKET...</p>
+                </div>
+                <div class="actions">
+                    <img src="img/like.png" alt="Likes">
+                    <img src="img/comment.png" alt="Comment">
+                    <img src="img/share.png" alt="Share">
+                </div>
+            </div>
+
+            <!-- Repeat for other posts -->
+            <div class="post">
+                <div class="sheader">
+                    <div style="display: flex; align-items: center;">
+                        <img src="img/logo.png" alt="Profile">
+                        <div class="info">
+                            <h3>SONIAUTOMARKET</h3>
+                            <p>Moosejaw, SK</p>
+                        </div>
+                    </div>
+                    <div class="menu">&#x22ee;</div>
+                </div>
+                <img src="img/insta2.jpg" alt="Car 2">
+                <div class="content">
+                    <div class="likes-count">1510 likes</div>
+                    <p>Can you guess what car it is? #SONIAUTOMARKET...</p>
+                </div>
+                <div class="actions">
+                    <img src="img/like.png" alt="Likes">
+                    <img src="img/comment.png" alt="Comment">
+                    <img src="img/share.png" alt="Share">
+                </div>
+            </div>
+            <!-- Add more posts as needed -->
+            <div class="post">
+              <div class="sheader">
+                  <div style="display: flex; align-items: center;">
+                      <img src="img/logo.png" alt="Profile">
+                      <div class="info">
+                          <h3>SONIAUTOMARKET</h3>
+                          <p>Moosejaw, SK</p>
+                      </div>
+                  </div>
+                  <div class="menu">&#x22ee;</div>
+              </div>
+              <img src="img/insta3.jpg" alt="Car 3">
+              <div class="content">
+                  <div class="likes-count">2872 likes</div>
+                  <p>BOSS WHIP FOR WINTERS ⛄❄ #SONIAUTOMARKET...</p>
+              </div>
+              <div class="actions">
+                  <img src="img/like.png" alt="Likes">
+                  <img src="img/comment.png" alt="Comment">
+                  <img src="img/share.png" alt="Share">
+              </div>
+          </div>
+
+            <!-- Add more posts as needed -->
+            <div class="post">
+              <div class="sheader">
+                  <div style="display: flex; align-items: center;">
+                      <img src="img/logo.png" alt="Profile">
+                      <div class="info">
+                          <h3>SONIAUTOMARKET</h3>
+                          <p>Moosejaw, SK</p>
+                      </div>
+                  </div>
+                  <div class="menu">&#x22ee;</div>
+              </div>
+              <img src="img/insta 4.jpg" alt="Car 4">
+              <div class="content">
+                  <div class="likes-count">2872 likes</div>
+                  <p>BOSS WHIP FOR WINTERS ⛄❄ #SONIAUTOMARKET...</p>
+              </div>
+              <div class="actions">
+                  <img src="img/like.png" alt="Likes">
+                  <img src="img/comment.png" alt="Comment">
+                  <img src="img/share.png" alt="Share">
+              </div>
+          </div>
+            <!-- Add more posts as needed -->
+            <div class="post">
+              <div class="sheader">
+                  <div style="display: flex; align-items: center;">
+                      <img src="img/logo.png" alt="Profile">
+                      <div class="info">
+                          <h3>SONIAUTOMARKET</h3>
+                          <p>Moosejaw, SK</p>
+                      </div>
+                  </div>
+                  <div class="menu">&#x22ee;</div>
+              </div>
+              <img src="img/insta5.jpg" alt="Car 5">
+              <div class="content">
+                  <div class="likes-count">2872 likes</div>
+                  <p>BOSS WHIP FOR WINTERS ⛄❄ #SONIAUTOMARKET...</p>
+              </div>
+              <div class="actions">
+                  <img src="img/like.png" alt="Likes">
+                  <img src="img/comment.png" alt="Comment">
+                  <img src="img/share.png" alt="Share">
+              </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+<div class="nawab-footer">
+    <div class="nawab-logo">
+        <img src="img/logo.png" alt="Nawab Motors Logo">
+    </div>
+    <div class="nawab-footer-container">
+        <div class="nawab-footer-section">
+            <h3>Dealership</h3>
+            <p>Welcome to Soni Auto-Market, your premier destination for quality vehicles and exceptional service. With over 17 years of experience in the automotive industry, Nawab Motors has established itself as a trusted name in the market.</p>
+            <div class="nawab-social-icons">
+                <img src="img/tiktok.png" alt="TikTok">
+                <img src="img/social.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="nawab-footer-section nawab-footer-hours">
+            <h3>Our Hours</h3>
+            <ul>
+                <li><span>Monday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Tuesday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Wednesday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Thursday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Friday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Saturday:</span><span>9:30 AM - 08:00 PM</span></li>
+                <li><span>Sunday:</span><span>11:00 AM - 05:30 PM</span></li>
+            </ul>
+        </div>
+        <div class="nawab-footer-section nawab-footer-contacts">
+            <h3>Our Contacts</h3>
+            <ul>
+                <li><a href="tel:9058749494">Call us: 905-874-9494</a></li>
+                <li>80 Manitoba St E, Moose Jaw, SK S6H 0A2, Canada</li>
+            </ul>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.470116924994!2d-79.7122190237054!3d43.688930863331825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3bfa8802c8fb%3A0x92b59ab769a30bb2!2s22%20Bramsteele%20Rd%2C%20Brampton%2C%20ON%20L6W%201B3%2C%20Canada!5e0!3m2!1sen!2sus!4v1672612812846!5m2!1sen!2sus" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <div class="nawab-footer-bottom">
+        &copy; 2024 Nawab Motors | Privacy & Policy | Powered by [Your Brand]
+    </div>
+</div>
+
+
+<script>
+    const postContainer = document.getElementById('post-container');
+    const posts = Array.from(document.querySelectorAll('.post'));
+    const visiblePosts = 4; // Number of visible posts
+    const postWidth = postContainer.offsetWidth / visiblePosts; // Calculate individual post width
+
+    function slidePosts() {
+        postContainer.style.transition = 'transform 0.5s ease-in-out';
+        postContainer.style.transform = `translateX(-${postWidth}px)`; // Slide by one post width
+
+        // Reset for infinite scrolling
+        setTimeout(() => {
+            const firstPost = posts.shift(); // Remove the first post
+            posts.push(firstPost); // Add it to the end of the array
+
+            postContainer.appendChild(firstPost); // Move the first post to the end
+            postContainer.style.transition = 'none'; // Disable transition for reset
+            postContainer.style.transform = 'translateX(0)'; // Reset position
+        }, 500); // Match transition duration
+    }
+
+    setInterval(slidePosts, 3000); // Slide every 3 seconds
+</script>
+</body>
+</html> 
